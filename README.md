@@ -3,7 +3,7 @@
 **The [Agent Client Protocol](https://agentclientprotocol.com) as C++ types.**
 
 A header-only C++23 library: ACP's schema and method table, on top of
-[jsonrpc-cpp](https://github.com/1ay1/jsonrpc-cpp). It has no runtime. No
+[jsonrpc-cpp](https://github.com/agentty-org/jsonrpc-cpp). It has no runtime. No
 threads, locks, futures, clocks or transports. The host owns the connection:
 it feeds bytes into a `jsonrpc::Engine`, performs the effects that come back,
 and dispatches the peer's calls with a `jsonrpc::Router`.
@@ -159,7 +159,7 @@ Use it from another CMake project:
 
 ```cmake
 include(FetchContent)
-FetchContent_Declare(acp-cpp GIT_REPOSITORY https://github.com/1ay1/acp-cpp.git GIT_TAG main)
+FetchContent_Declare(acp-cpp GIT_REPOSITORY https://github.com/agentty-org/acp-cpp.git GIT_TAG main)
 FetchContent_MakeAvailable(acp-cpp)
 
 target_link_libraries(my_thing PRIVATE acp::acp)
